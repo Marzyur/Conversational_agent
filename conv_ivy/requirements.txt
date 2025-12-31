@@ -159,7 +159,7 @@ blinker==1.9.0
 cachetools==6.2.4
 certifi==2025.11.12
 charset-normalizer==3.4.4
-click==8.3.1
+click>=8.1,<9.0
 distro==1.9.0
 fpdf==1.7.2
 gitdb==4.0.12
@@ -211,7 +211,7 @@ blinker==1.9.0
 cachetools==6.2.4
 certifi==2025.11.12
 charset-normalizer==3.4.4
-click==8.3.1
+click>=8.1,<9.0
 distro==1.9.0
 fpdf==1.7.2
 gitdb==4.0.12
