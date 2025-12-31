@@ -95,3 +95,4 @@ class CareerBrain:
             'update_scribe': local_update,
             'is_complete': all(k in current_state for k in ['name', 'grade', 'board', 'interests', 'strengths'])
         }
+        # End of CareerBrain class
