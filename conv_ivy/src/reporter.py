@@ -20,10 +20,25 @@ def generate_career_pdf(scribe):
 
     pdf.ln(5)
     pdf.set_font("Arial", 'B', 12)
-    pdf.cell(200, 10, "Key Strengths:", ln=True)
+    pdf.cell(200, 10, "Core Values:", ln=True)
     pdf.set_font("Arial", '', 12)
-    for s in scribe['strengths']:
-        pdf.cell(200, 8, f"- {s}", ln=True)
+    for v in scribe['values']:
+        pdf.cell(200, 8, f"- {v}", ln=True)
+
+    pdf.ln(5)
+    pdf.set_font("Arial", 'B', 12)
+    pdf.cell(200, 10, f"Preferred Work Environment: {scribe['work_environment']}", ln=True)
+
+    pdf.ln(5)
+    pdf.set_font("Arial", 'B', 12)
+    pdf.cell(200, 10, f"Long-term Goals: {scribe['goals']}", ln=True)
+
+    pdf.ln(5)
+    pdf.set_font("Arial", 'B', 12)
+    pdf.cell(200, 10, "Recommended Career Paths:", ln=True)
+    pdf.set_font("Arial", '', 12)
+    for p in scribe['paths']:
+        pdf.cell(200, 8, f"- {p}", ln=True)
 
     # Return a bytes object suitable for Streamlit's download_button
     pdf_out = pdf.output(dest='S')

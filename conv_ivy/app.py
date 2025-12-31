@@ -47,6 +47,9 @@ if "scribe" not in st.session_state:
         "board": "",
         "interests": [],
         "strengths": [],
+        "values": [],
+        "work_environment": "",
+        "goals": "",
         "paths": [],
         "count": 0,
     }
@@ -70,7 +73,7 @@ brain = CareerBrain()
 col_chat, col_scribe = st.columns([0.6, 0.4])
 
 with col_chat:
-    st.markdown(f"**Chat with Ivy** — Milestone {min(st.session_state.scribe['count'], 5)}/5")
+    st.markdown(f"**Chat with Ivy** — Milestone {min(st.session_state.scribe['count'], 8)}/8")
 
     # Render Chat History
     chat_html = ""
@@ -137,7 +140,10 @@ with col_scribe:
     st.markdown(f"**Grade:** {s['grade'] or '...'}")
     st.markdown(f"**Top Interests:** {', '.join(s['interests']) if s['interests'] else '...'}")
     st.markdown(f"**Key Strengths:** {', '.join(s['strengths']) if s['strengths'] else '...'}")
-    st.markdown(f"**Recommended Path:** {', '.join(s['paths']) if s['paths'] else '...'}")
+    st.markdown(f"**Core Values:** {', '.join(s['values']) if s['values'] else '...'}")
+    st.markdown(f"**Preferred Work Environment:** {s['work_environment'] or '...'}")
+    st.markdown(f"**Long-term Goals:** {s['goals'] or '...'}")
+    st.markdown(f"**Recommended Paths:** {', '.join(s['paths']) if s['paths'] else '...'}")
 
     if st.button("Download Career Report", use_container_width=True):
         pdf = generate_career_pdf(s)
