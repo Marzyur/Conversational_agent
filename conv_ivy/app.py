@@ -14,7 +14,8 @@ from src.reporter import generate_career_pdf
 
 @st.cache_resource
 def get_ivy_gif():
-    with open("assets/Ivy_animation.gif", "rb") as f:
+    gif = os.path.join(os.path.dirname(__file__), "assets", "Ivy_animation.gif") 
+    with open(gif, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
 @st.cache_resource 
