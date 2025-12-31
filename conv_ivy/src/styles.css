@@ -1,0 +1,54 @@
+/* Global Reset */
+.stApp { background-color: #FFFFFF; }
+
+/* The Rainbow Box */
+.capture-card {
+    border: 2px solid transparent;
+    border-radius: 24px;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #A855F7, #EC4899, #3B82F6, #10B981) border-box;
+    padding: 24px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Scroll area for messages */
+.messages-scroll-area {
+    height: 400px;
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+
+/* Positioning the Mic Button inside the Box */
+.mic-container-wrapper {
+    position: relative;
+    margin-top: -60px; /* Pulls the button up into the card visually */
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.mic-container-wrapper button {
+    border-radius: 50px !important;
+    background: white !important;
+    border: 1px solid #E5E7EB !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* Banner Styling */
+.instruction-banner {
+    background-color: #FFF9F1;
+    border: 1px solid #FFD8A8;
+    border-radius: 16px;
+    padding: 16px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scribe-panel {
+    background-color: #F9FAFB;
+    padding: 20px;
+    border-radius: 16px;
+}
