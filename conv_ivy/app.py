@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import hashlib
 import inspect
@@ -16,9 +17,10 @@ def get_ivy_gif():
     with open("assets/Ivy_animation.gif", "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-@st.cache_resource
-def load_css():
-    with open("src/styles.css") as f:
+@st.cache_resource 
+def load_css(): 
+    css_path = os.path.join(os.path.dirname(__file__), "src", "styles.css")
+    with open(css_path) as f:
         return f.read()
 
 # -------------------------------
