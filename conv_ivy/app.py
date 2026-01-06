@@ -99,7 +99,7 @@ with col_chat:
     )
 
     # Audio Recording
-    audio = mic_recorder(start_prompt="Speak to Ivy", stop_prompt="Stop", key='mic')
+    audio = mic_recorder(start_prompt="🎙️", stop_prompt="Stop", key='mic')
     if audio and audio.get('bytes'):
         ahash = hashlib.sha256(audio['bytes']).hexdigest()
         if st.session_state.get('last_hash') != ahash:
