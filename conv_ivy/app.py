@@ -133,7 +133,7 @@ with col_chat:
                 st.rerun()
 
 with col_scribe:
-    st.markdown('<div class="scribe-panel" style="background:#F9FAFB; padding:20px; border-radius:15px; border:1px solid #EEE;">', unsafe_allow_html=True)
+    
     st.subheader("📝 Live Discovery Scribe")
     s = st.session_state.scribe
 
